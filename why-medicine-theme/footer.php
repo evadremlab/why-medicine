@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			&copy; 2018 Rhea Misra, all rights reserved.
+			<?php echo sprintf( __( '&copy; %s Rhea Misra, All rights reserved.', 'why-medicine'), date( "Y" ) ) ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
