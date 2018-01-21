@@ -17,8 +17,8 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-			if (get_field('doctor_title') ): ?>
-				<span class="doctor-title"><?php the_field('doctor_title'); ?></span>
+			if (get_field('title') ): ?>
+				<span class="doctor-title"><?php the_field('title'); ?></span>
 			<?php
 			endif;
 		endif;
@@ -36,11 +36,6 @@
 	<div class="entry-content">
 		<?php
 			the_excerpt();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'why-medicine' ),
-				'after'  => '</div>',
-			) );
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
