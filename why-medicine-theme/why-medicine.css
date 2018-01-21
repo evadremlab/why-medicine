@@ -1,0 +1,80 @@
+html, body {
+	font-family: 'Lato', sans-serif !important;
+}
+.site-header {
+	padding-left: 2px;
+	min-height: 7rem; /* otherwise, because inner content is position:relative, div has 0 height  */
+	background-color: #eee;
+}
+.site-branding {
+	position: relative;
+}
+.site-title {
+  position: absolute;
+  top: -10px;
+  left: 164px;
+  font-size: 2rem;
+	font-family: 'Fredericka the Great', cursive;
+}
+.site-title a,
+.site-title a:hover,
+.site-title a:active {
+	color: purple;
+	text-decoration: none !important;
+}
+.site-description {
+  position: absolute;
+  top: 50px;
+  left: 164px;
+	color: #999;
+  font-size: 1.25rem;
+	font-style: italic;
+}
+.main-navigation {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: auto;
+	float: right;
+  display: inline-block;
+}
+.main-navigation li {
+	margin-right: 1rem;
+	border: 1px solid #ccc;
+}
+.main-navigation li:hover {
+	background-color: aliceblue;
+}
+.main-navigation a {
+	padding: 5px 10px;
+}
+.site-main {
+	padding: 0 1rem;
+}
+.site-footer {
+	text-align: right;
+	font-size: 0.8rem;
+	padding: 2px 5px 2px 0;
+	background-color: #eee;
+	border-top: 1px solid #ddd;
+}
+.entry-content {
+	margin-top: 0;
+}
+.home .site-main {
+	padding: 0;
+}
+.home header.entry-header { /* hide the page name on the home page */
+	display: none;
+}
+.home .entry-content {
+	margin: 0;
+}
+h1.entry-title { /* page titles */
+	color: purple; /* same as .site-title */
+	margin: 0.25rem 0 0 0;
+}
+#home-slider {
+	width: 100%;
+	overflow-x: hidden;;
+}
