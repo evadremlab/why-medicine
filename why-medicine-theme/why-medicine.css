@@ -78,3 +78,15 @@ h1.entry-title { /* page titles */
 	width: 100%;
 	overflow-x: hidden;;
 }
+.archive-interview .post-thumbnail {
+	display: inline-block;
+	float: left;
+	margin-right: 1rem;
+}
+.archive-interview h2.entry-title {
+	margin-bottom: 0;
+}
+.archive-interview .doctor-title {
+	display: inline-block;
+	padding-bottom: 5px;
+}

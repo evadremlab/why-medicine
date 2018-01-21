@@ -1,0 +1,33 @@
+==================================================================================================================
+Page Templates
+------------------------------------------------------------------------------------------------------------------
+template-interviews.php          Interviews
+==================================================================================================================
+Page Fragments
+------------------------------------------------------------------------------------------------------------------
+content-single-interview.php
+==================================================================================================================
+Redirect Pages
+------------------------------------------------------------------------------------------------------------------
+archive-interview.php        ==> Interviews
+==================================================================================================================
+Page Rendering (use Current Template File plugin to see files being used to render the current page)
+------------------------------------------------------------------------------------------------------------------
+single-interview.php --> content-single-interview.php --> header-breadcrumb.php
+==================================================================================================================
+Plug-ins
+------------------------------------------------------------------------------------------------------------------
+Advanced Custom Fields
+Custom Post Type UI 1.5.6   for creating the Interview post type
+Show Current Template       for debugging which template/parts are used for a page/post
+Easy Google Fonts           for including Google fonts
+
+NOT YET:
+Akismet                     for spam blocking
+Meta Slider                 demo on http://alamedanavalairmuseum.org/history/nas-alameda-units/
+Enhanced Media Library      for adding categories to images and filtering
+==================================================================================================================
+HOW TO: hide the current page/post in breadcrumbs
+------------------------------------------------------------------------------------------------------------------
+document.querySelector('#breadcrumbs .breadcrumb_last').previousSibling.textContent = '';
+==================================================================================================================
