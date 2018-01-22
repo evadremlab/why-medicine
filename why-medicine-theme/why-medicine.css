@@ -17,15 +17,20 @@ body.admin-bar #page {
 
 .site-header {
 	padding-left: 5px;
-	min-height: 7rem; /* otherwise, because inner content is position:relative, div has 0 height  */
+	min-height: 5.5rem; /* otherwise, because inner content is position:relative, div has 0 height  */
 	background-color: #eee;
 }
 .site-branding {
 	position: relative;
 }
+.site-branding .custom-logo-link {
+	display: block;
+	position: relative;
+	top: 22px;
+}
 .site-title {
   position: absolute;
-  top: -1rem;
+  top: -1.95rem;
   left: 164px;
   font-size: 2rem;
 	font-family: 'Fredericka the Great', cursive;
@@ -38,7 +43,7 @@ body.admin-bar #page {
 }
 .site-description {
   position: absolute;
-  top: 2.25rem;
+  top: 1.25rem;
   left: 164px;
 	color: #999;
   font-size: 1.5rem;
