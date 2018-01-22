@@ -9,18 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="content-interview" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="content-resource" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">Interview: ', '</h1>' );
+			the_title( '<h1 class="entry-title">Resource: ', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if (get_field('title') ): ?>
-			<span class="doctor-title"><?php the_field('title'); ?></span>
-		<?php
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>

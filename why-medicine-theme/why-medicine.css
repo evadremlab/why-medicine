@@ -67,6 +67,7 @@ body.admin-bar #page {
 }
 .site-footer {
 	height: 2rem;
+	line-height: 2rem;
 	font-size: 1rem;
 	text-align: right;
 	padding: 2px 5px 2px 0;
@@ -96,11 +97,18 @@ h1.entry-title { /* page titles */
 	width: 100%;
 	overflow-x: hidden;;
 }
+.content-interview .post-thumbnail,
 .single-interview .post-thumbnail,
 .archive-interview .post-thumbnail {
 	display: inline-block;
 	float: left;
 	margin-right: 1rem;
+}
+.archive-interview .post-thumbnail:hover {
+	opacity: 0.85;
+}
+.single-interview article header {
+	margin-bottom: 1rem;
 }
 .archive-interview h2.entry-title {
 	margin-bottom: 0;
@@ -108,4 +116,32 @@ h1.entry-title { /* page titles */
 .archive-interview .doctor-title {
 	display: inline-block;
 	padding-bottom: 5px;
+}
+.archive-resource .page-header {
+	padding-bottom: 1rem;
+}
+.archive-resource article {
+	float: left;
+	width: 14rem;
+	max-width: 14rem;
+	margin: 0 1rem;
+	padding: 1rem;
+	border: 1px solid;
+}
+.archive-resource article:hover {
+	background-color: aliceblue;
+}
+.archive-resource article a {
+	display: block;
+	text-align: center;
+}
+.archive-resource article .entry-title {
+	font-size: 1rem;
+	text-align: center;
+}
+.single-resource .post-thumbnail { /* hide thumbnail on detail page */
+	display: none;
+}
+.nav-subtitle, .post-navigation .nav-links { /* remove next/prev links at the bottom of posts */
+	display: none;
 }
