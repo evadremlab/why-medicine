@@ -9,6 +9,6 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 <article class="featured-interview">
-  <div><?php echo $anam_event_thumbnail; ?></div>
+  <a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo $anam_event_thumbnail; ?></a>
   <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title() ?></a>
 </article>
