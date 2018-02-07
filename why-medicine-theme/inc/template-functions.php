@@ -9,7 +9,7 @@
 * Add theme styles. "styles.css" contains the core styles for the _s base theme.
 */
 function enqueue_styles() {
-	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Fredericka+the+Great');
+	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Tinos|Fredericka+the+Great');
 	wp_enqueue_style( 'why-medicine', get_template_directory_uri() . '/why-medicine.css');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );

@@ -1,8 +1,22 @@
 html, body {
-	font-family: 'Open Sans', sans-serif !important;
+	font-family: 'Times New Roman', serif !important;
+}
+#page {
+	font-size: 1.1rem;
+}
+html, body {
+	color: darkblue !important;
+}
+#page a, #page a:visited, #page a:hover, #page a:focus, #page a:active {
+	color: darkblue !important;
+	text-decoration: none;
+}
+#content a:hover {
+	text-decoration: underline;
 }
 
 /* sticky footer */
+
 #page {
   display: flex;
   min-height: 100vh;
@@ -17,38 +31,48 @@ body.admin-bar #page {
 
 .site-header {
 	padding-left: 5px;
-	min-height: 5.5rem; /* otherwise, because inner content is position:relative, div has 0 height  */
+	height: 4.5rem;
+	min-height: 4.5rem; /* otherwise, because inner content is position:relative, div has 0 height  */
 	background-color: #eee;
 }
 .site-branding {
 	position: relative;
 }
-/* .site-branding .custom-logo-link {
-	display: block;
-	position: relative;
-	top: 22px;
-} */
-.site-title {
-  position: absolute;
-  top: -0.95rem;
-  left: 164px;
-  font-size: 2rem;
-	font-family: 'Fredericka the Great', cursive;
+.site-branding .custom-logo-link img {
+	width: auto;
+	height: 4.5rem;
 }
-.site-title a,
-.site-title a:hover,
-.site-title a:active {
-	color: purple;
-	text-decoration: none !important;
+.home .site-branding .custom-logo-link img {
+	width: auto;
+	height: 6.5rem;
+}
+.site-branding .custom-logo-link {
+	position: absolute;
+	top: 0;
+	left: -5px;
+	z-index: 10;
+}
+.site-title, .site-description {
+	display: none;
+}
+.home .site-title, .home .site-description {
+	display: block;
+	z-index: 20; /* on top of slider */
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	text-shadow: 0px 0px 9px rgba(0, 0, 0, 1);
+}
+.site-title {
+	top: 3rem;
+	font-size: 5rem;
 }
 .site-description {
-  position: absolute;
-  top: 2.25rem;
-  left: 164px;
-	color: #999;
-  font-size: 1.5rem;
-	font-style: italic;
+	top: 10.5rem;
+	font-size: 3rem;
+	color: #fff;
 }
+
 .main-navigation {
   position: absolute;
   top: 0;
@@ -59,18 +83,19 @@ body.admin-bar #page {
 	padding: 10px 5px 5px 0;
 }
 .admin-bar .main-navigation {
-	top: 40px;
+	top: 35px;
 }
 .main-navigation .menu-toggle {
 	font-size: 1rem;
 	padding: 5px 6px;
 }
 .main-navigation li {
+	border-radius: 5px;
 	margin-right: 1rem;
-	border: 1px solid #ccc;
+	border: 2px solid #ccc;
 }
 .main-navigation li:hover {
-	background-color: aliceblue;
+	background-color: lightblue;
 }
 .main-navigation a {
 	padding: 5px 10px;
@@ -106,7 +131,6 @@ body.admin-bar #page {
 	margin: 0;
 }
 h1.entry-title { /* page titles */
-	color: purple; /* same as .site-title */
 	margin: 0.25rem 0 0 0;
 }
 #home-slider {
@@ -138,18 +162,12 @@ h1.entry-title { /* page titles */
 }
 .archive-resource article {
 	float: left;
-	width: 14rem;
-	max-width: 14rem;
-	margin: 0 1rem 1rem 1rem;
-	padding: 1rem;
+	margin: 0 1rem 1rem 0;
+	padding: 10px;
 	border: 1px solid;
 }
 .archive-resource article:hover {
 	background-color: aliceblue;
-}
-.archive-resource article a {
-	display: block;
-	text-align: center;
 }
 .archive-resource article .entry-title {
 	font-size: 1rem;
@@ -171,34 +189,29 @@ h1.entry-title { /* page titles */
 /* Featured Posts widget */
 .widget_featured_posts_widget {
   display: flex;
-	position: relative;
 	align-items: center;
-  justify-content: center;
-	top: -5rem;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 	margin: 0; /* override default widget setting */
-	z-index: 999; /* on top of slider */
+	z-index: 20; /* on top of slider */
 }
-.widget_featured_posts_widget article {
+.featured-interview {
 	display: inline-block;
-	width: 200px;
-	margin: 10px;
-	padding: 10px;
-	border: 2px solid cyan;
+	width: 300px;
+	height: 200px;
+	margin: 35px;
+	padding: 15px;
 	background-color: #fff;
 }
-.widget_featured_posts_widget img {
-	width: 100%;
-}
-.widget_featured_posts_widget article a {
+.featured-interview a {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-}
-.widget_featured_posts_widget article a:hover {
-	text-decoration: underline;
-}
-featured-interview:hover {
-	background-color: aliceblue;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 }
 
 /* Social media icons on Contact page */
@@ -211,15 +224,15 @@ featured-interview:hover {
 	margin-bottom: 0;
 }
 #contact-container .left {
-	float: left;
-	width: 400px;
+	/* float: left; */
+	width: 410px;
 	margin-right: 1rem;
 }
 #contact-container .right {
-	display: flex;
+	/* display: flex; */
 	width: 600px;
 }
-#contact-container .right div[role="form"] {
+#contact-container div[role="form"] {
 	width: 100%;
 }
 #contact-container .contact-link {
@@ -238,16 +251,14 @@ featured-interview:hover {
   padding: 10px 0;
 }
 
+.contact-container img {
+	height: 33px;
+}
+
 .contact-text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.contact-text-container a {
-	text-decoration: none;
-}
-.contact-text-container a:hover {
-	text-decoration: underline;
 }
 
 /* Two column layout for About page */
@@ -265,6 +276,15 @@ featured-interview:hover {
 	display: flex;
 	width: 50%;
 	padding: 1rem;
+}
+.page-template-custom-contact-template .post-thumbnail {
+	margin-left: -1rem !important; /* to counteract .site-main padding */
+}
+
+/**/
+
+.wds_left_btn_cont, .wds_right_btn_cont { /* hide slider controls */
+	display: none !important;
 }
 
 /**/
@@ -308,31 +328,69 @@ featured-interview:hover {
 	text-decoration: none;
 }
 
-/**/
+/* MEDIA QUERIES */
 
-@media screen and (min-width: 1024px) {
+.menu-toggle {
+	display: none;
+}
+.main-navigation ul {
+	display: block;
+}
+
+@media only screen and (max-width: 768px) { /* tablet */
 	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
 		display: block;
 	}
-	#wp-admin-bar-my-account {
-		display: none !important;
+	.main-navigation ul {
+		display: none;
+	}
+	.site-header {
+		height: 3.5rem;
+		min-height: 3.5rem;
+	}
+	.site-branding .custom-logo-link img {
+		width: auto;
+		height: 3.5rem;
+	}
+	.featured-interview {
+		display: inline-block;
+		width: 200px;
+		height: 100px;
+		margin: 25px;
+		padding: 10px;
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media only screen and (max-width: 768px) and (orientation: landscape) { /* tablet */
+	featured-interview {
+		width: 125px;
+	}
+}
+
+@media only screen and (max-width: 414px) { /* smartphone */
+	#wp-admin-bar-my-account {
+		display: none !important;
+	}
+	#page {
+		font-size: 0.9rem;
+	}
 	.site-branding img {
-		width: 130px;
+		width: 100px;
 	}
-	.site-title {
-		left: 150px;
-		font-size: 1.5rem;
+	.widget_featured_posts_widget {
+		display: block;
+		bottom: 2rem;
+		top: auto;
+		display: flex;
+		align-content: center;
+		flex-direction: row;
 	}
-	.site-description {
-		left: 150px;
-		font-size: 1rem;
+	.featured-interview {
+		display: block;
+		width: 200px;
+		height: 125px;
+		margin: 0 0 15px 0;
+		padding: 5px;
 	}
 	#about-container {
 		display: block;
@@ -365,10 +423,27 @@ featured-interview:hover {
 		width: 92%;
 		max-width: 92%;
 	}
+	.site-header {
+		height: 3rem;
+		min-height: 3rem;
+	}
+	.site-branding .custom-logo-link img {
+		width: auto;
+		height: 3rem;
+	}
 	.site-footer {
 		text-align: center;
 	}
-	.widget_featured_posts_widget article {
+	featured-interview {
 		margin: 5px;
+	}
+}
+
+@media only screen and (max-width: 375px) { /* small smartphone */
+	#about-container .entry-content img {
+		float: none;
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
 	}
 }

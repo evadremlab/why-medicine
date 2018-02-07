@@ -28,10 +28,35 @@ get_header(); ?>
 				 */
 
         ?>
+
+				<div class="post-thumbnail">
+					<?php the_post_thumbnail('full'); ?>
+				</div><!-- .post-thumbnail -->
+
+				<header class="entry-header">
+					<?php
+					if ( is_singular() ) :
+						the_title( '<h1 class="entry-title">', '</h1>' );
+					else :
+						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					endif;
+
+					if ( 'post' === get_post_type() ) : ?>
+					<div class="entry-meta">
+						<?php why_medicine_posted_on(); ?>
+					</div><!-- .entry-meta -->
+					<?php
+					endif; ?>
+				</header><!-- .entry-header -->
+
 				<div id="contact-container">
 				  <div class="left">
+						<!-- shortcode for the live site -->
+						<?php echo do_shortcode('[contact-form-7 id="69" title="Contact form"]'); ?>
+				  </div>
+					<div class="right">
 						<?php
-	          get_template_part( 'template-parts/content', get_post_format() );
+	          get_template_part( 'template-parts/content-contact', get_post_format() );
 	          ?>
 						<div class="contact-container">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/email-icon.jpg" />
@@ -51,10 +76,6 @@ get_header(); ?>
 								<a href="<?php the_field('linkedin'); ?>" target="_blank"><?php the_field('linkedin'); ?></a>
 							</div>
 						</div>
-				  </div>
-					<div class="right">
-						<!-- shortcode for the live site -->
-						<?php echo do_shortcode('[contact-form-7 id="69" title="Contact form"]'); ?>
 			    </div>
 			  </div>
 				<?php

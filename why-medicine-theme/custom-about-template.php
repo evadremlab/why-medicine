@@ -29,12 +29,7 @@ get_header(); ?>
 
         ?>
 				<div id="about-container">
-				  <div class="left">
-						<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-					</div>
-					<div class="right">
-						<?php the_field('text'); ?>
-			    </div>
+					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 			  </div>
 				<?php
 			endwhile;

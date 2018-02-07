@@ -31,7 +31,7 @@
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?><?php esc_html_e( ': A Student`s Journey', 'why-medicine' ); ?></h1-->
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a style="color:#fff !important;" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;
 
