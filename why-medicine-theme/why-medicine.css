@@ -42,9 +42,6 @@ body.admin-bar #page {
 	width: auto;
 	height: 4.5rem;
 }
-.home .site-branding .custom-logo-link {
-	background-color: #fff;
-}
 .home .site-branding .custom-logo-link img {
 	width: auto;
 	height: 6.5rem;
@@ -359,9 +356,6 @@ h1.entry-title { /* page titles */
 		height: 3.5rem;
 		min-height: 3.5rem;
 	}
-	.home .site-branding .custom-logo-link {
-		background-color: transparent;
-	}
 	.home .site-branding .custom-logo-link img {
 		width: auto;
 		height: 3rem;
@@ -448,9 +442,6 @@ h1.entry-title { /* page titles */
 	.site-header {
 		height: 3rem;
 		min-height: 3rem;
-	}
-	.home .site-branding .custom-logo-link {
-		background-color: transparent;
 	}
 	.home .site-branding .custom-logo-link img {
 		width: auto;
