@@ -61,7 +61,7 @@ body.admin-bar #page {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+	text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
 }
 .site-title {
 	top: 3rem;
@@ -135,7 +135,11 @@ h1.entry-title { /* page titles */
 }
 #home-slider {
 	width: 100%;
-	overflow-x: hidden;;
+	overflow-x: hidden;
+}
+.page-template-custom-about-template .entry-content img {
+	width: 20%;
+	max-width: 20%;
 }
 .content-interview .post-thumbnail,
 .single-interview .post-thumbnail,
@@ -202,7 +206,7 @@ h1.entry-title { /* page titles */
 	width: 300px;
 	height: 200px;
 	margin: 35px;
-	padding: 15px;
+	padding: 8px;
 	background-color: #fff;
 }
 .featured-interview a {
@@ -278,7 +282,10 @@ h1.entry-title { /* page titles */
 	padding: 1rem;
 }
 .page-template-custom-contact-template .post-thumbnail {
+	max-height: 150px;
+	overflow: hidden;
 	margin-left: -1rem !important; /* to counteract .site-main padding */
+	margin-right: -1rem !important; /* to counteract .site-main padding */
 }
 
 /**/
@@ -338,6 +345,9 @@ h1.entry-title { /* page titles */
 }
 
 @media only screen and (max-width: 768px) { /* tablet */
+	.page-template-custom-contact-template .post-thumbnail {
+		display: none;
+	}
 	.site-title {
 		top: 2rem;
 		font-size: 3rem;
