@@ -39,12 +39,20 @@ body.admin-bar #page {
 	position: relative;
 }
 .site-branding .custom-logo-link img {
+	display: none;
+}
+.site-branding .custom-logo-link-small img {
+	display: block;
 	width: auto;
 	height: 4.5rem;
 }
 .home .site-branding .custom-logo-link img {
+	display: block;
 	width: auto;
 	height: 6.5rem;
+}
+.home .site-branding .custom-logo-link-small img {
+	display: none;
 }
 .site-branding .custom-logo-link {
 	position: absolute;
@@ -136,6 +144,12 @@ h1.entry-title { /* page titles */
 #home-slider {
 	width: 100%;
 	overflow-x: hidden;
+}
+.page-template-custom-about-template .wds_slider_cont {
+  float: left;
+  width: 325px !important;
+  position: relative;
+  left: -6px;
 }
 .page-template-custom-about-template .entry-content img {
 	width: 20%;
@@ -344,6 +358,15 @@ h1.entry-title { /* page titles */
 	display: block;
 }
 
+@media only screen and (max-width: 812px) and (orientation: landscape) { /* iPhone X */
+	.menu-toggle {
+		display: block;
+	}
+	.main-navigation ul {
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 768px) { /* tablet */
 	.page-template-custom-contact-template .post-thumbnail {
 		display: none;
@@ -368,7 +391,11 @@ h1.entry-title { /* page titles */
 	}
 	.home .site-branding .custom-logo-link img {
 		width: auto;
-		height: 3rem;
+		height: 5rem;
+	}
+	.site-branding .custom-logo-link-small img {
+		width: auto;
+		height: 4rem;
 	}
 	.featured-interview {
 		display: inline-block;
@@ -455,7 +482,11 @@ h1.entry-title { /* page titles */
 	}
 	.home .site-branding .custom-logo-link img {
 		width: auto;
-		height: 2.5rem;
+		height: 4.5rem;
+	}
+	.site-branding .custom-logo-link-small img {
+		width: auto;
+		height: 3.5rem;
 	}
 	.site-footer {
 		text-align: center;

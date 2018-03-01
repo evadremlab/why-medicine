@@ -28,9 +28,11 @@
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
+
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?><?php esc_html_e( ': A Student`s Journey', 'why-medicine' ); ?></h1-->
 			<?php else : ?>
+				<a href="/" class="custom-logo-link-small" rel="home" itemprop="url"><img width="1080" height="380" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-small.png" class="custom-logo-small" alt="Why Medicine?"></a>
 				<p class="site-title"><a style="color:#fff !important;" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;
