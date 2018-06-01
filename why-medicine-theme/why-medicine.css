@@ -72,12 +72,12 @@ body.admin-bar #page {
 	text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
 }
 .site-title {
-	top: 3rem;
-	font-size: 5rem;
+	top: 6rem;
+	font-size: 8rem;
 }
 .site-description {
-	top: 10.5rem;
-	font-size: 3rem;
+	top: 18.5rem;
+	font-size: 5rem;
 	color: #fff;
 }
 
@@ -206,7 +206,8 @@ h1.entry-title { /* page titles */
 
 /* Featured Posts widget */
 .widget_featured_posts_widget {
-  display: flex;
+	display: none;
+  /* display: flex; */
 	align-items: center;
 	justify-content: center;
 	position: absolute;
@@ -358,26 +359,26 @@ h1.entry-title { /* page titles */
 	display: block;
 }
 
-@media only screen and (max-width: 812px) and (orientation: landscape) { /* iPhone X */
+@media only screen and (max-width: 880px) { /* iPhone X */
 	.menu-toggle {
 		display: block;
 	}
 	.main-navigation ul {
 		display: none;
 	}
+	.site-title {
+		top: 9rem;
+		font-size: 5rem;
+	}
+	.site-description {
+		top: 17rem;
+		font-size: 3rem;
+	}
 }
 
 @media only screen and (max-width: 768px) { /* tablet */
 	.page-template-custom-contact-template .post-thumbnail {
 		display: none;
-	}
-	.site-title {
-		top: 2rem;
-		font-size: 3rem;
-	}
-	.site-description {
-		top: 6.5rem;
-		font-size: 2rem;
 	}
 	.menu-toggle {
 		display: block;
@@ -412,15 +413,29 @@ h1.entry-title { /* page titles */
 	}
 }
 
-@media only screen and (max-width: 414px) { /* smartphone */
+@media only screen and (max-width: 600px) { /* smartphone */
 	.site-title {
-		top: 3rem;
+		top: 10rem;
+		font-size: 3.5rem;
+	}
+	.site-description {
+		top: 15.5rem;
+		font-size: 2.25rem;
+	}
+}
+
+@media only screen and (max-width: 450px) { /* smartphone */
+	.site-title {
+		top: 11rem;
 		font-size: 3rem;
 	}
 	.site-description {
-		top: 7.5rem;
+		top: 15.5rem;
 		font-size: 2rem;
 	}
+}
+
+@media only screen and (max-width: 414px) { /* smartphone */
 	#wp-admin-bar-my-account {
 		display: none !important;
 	}
